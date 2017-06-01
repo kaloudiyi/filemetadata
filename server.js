@@ -13,7 +13,6 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', upload.single('userfile'), function (req, res) {
-  console.log(req.file);
   var obj = {size: req.file.size};
   res.json(obj);
 })
